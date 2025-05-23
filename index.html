@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Ivoneide Silva</title>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
 <body>
   <header style="position: relative;">
@@ -188,18 +190,13 @@
             <h2  class="badge" style=" background-color: orange; color:#000015 ;padding:10px">Vamos conversar?</h2>
              <h1 class="event-title">me conte mais sobre o seu projeto</h1>
               <h4>Preencha os dados abaixo e entrarei em contato o mais breve possível para discutir seu projeto.</h4>
-              <div>
-                <label id="icon" for="name">Name</label>
-                <br>
-                <input type="text" name="name" id="name" placeholder="Name" required/>
-                <br>
-                <br>
-                <label id="icon" for="name">Email</label>
-                <br>
-                <input type="text" name="name" id="name" placeholder="Email" required/>
-                
-              </div>
-              <button class="w3-btn w3-red w3-margin-top w3-round">Enviar</button>
+               <form id="formulario">
+    <input type="text" id="nome" placeholder="Nome"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="text" id="mensagem" placeholder="Mensagem"><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="message" style="color: green; display: none;">As informações foram enviadas com sucesso!</p>
                 
           </div>
           <div class="event-image">
@@ -245,8 +242,76 @@
       }
     }
     </script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script type="module">
+  import { enviarDadosFormulario } from 'firebase.js';
+
+  // Adicionar evento de envio ao formulário
+// Adicionar evento de envio ao formulário
+const formContato = document.getElementById('formularioContato');
+
+formContato.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nome = formContato['name'].value;
+
+    try {
+        // Enviar os dados para o Firebase Realtime Database
+        await enviarDadosFormulario(nome);
+        console.log('Dados do formulário de contato enviados com sucesso!');
+        
+        // Aqui você pode adicionar a lógica para mostrar a mensagem de sucesso
+        const messageDiv = document.getElementById("message");
+        messageDiv.style.display = "block"; // Exibir mensagem de sucesso
+    } catch (error) {
+        console.error('Erro ao enviar dados do formulário de contato:', error);
+        alert("Erro ao enviar o formulário. Tente novamente.");
+    }
+
+    // Limpar o formulário após o envio
+    formContato.reset();
+});
+
+</script>
+
+  <script>
+    // ✅ Configurações do Firebase
+ const firebaseConfig = {
+  apiKey: "AIzaSyBmqnjiAHb-pjqsspZ6kcBjcK9Lks0iHqU",
+  authDomain: "portifolionid.firebaseapp.com",
+  databaseURL: "https://portifolionid-default-rtdb.firebaseio.com",
+  projectId: "portifolionid",
+  storageBucket: "portifolionid.firebasestorage.app",
+  messagingSenderId: "438566113511",
+  appId: "1:438566113511:web:efaf522682c2d6d8051242"
+};
+
+    // ✅ Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // ✅ Evento de envio do formulário
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+      event.preventDefault(); // evita recarregar
+
+      // Pega os valores
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      // Envia para o Firebase
+      database.ref("mensagens").push({
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+      })
+      .then(() => alert("Dados enviados com sucesso!"))
+      .catch((error) => console.error("Erro ao enviar dados:", error));
+    });
+  </script>
+<script src="firebase.js"></script>
+<script src="ConfirmacaoEnvio.js"></script>
+<script type="module" src="app.js"></script>
+
 
 </body>
 </html>
