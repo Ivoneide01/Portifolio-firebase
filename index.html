@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ivoneide Silva</title>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <header style="position: relative;">
+
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!--<a href="#about" class="w3-bar-item w3-button w3-padding-large  w3-hover-black">Menu</a><-->
+        <div >
+          <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black" >Sobre</a>
+          <a href="#projects" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"> Projetos</a>
+          <a href="#talk" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Email</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Contato</a>
+        </div>
+    
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">Sobre</a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">Projetos</a>
+        <a href="#talk" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Email</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contato</a>
+      </div>
+    </div>
+  </header>
+      <section >
+         <div class="hero" id="about">
+           <div class="hero-description">
+             <div class="hero-text">
+              <h1 class="hero-title">Explorando Meu Mundo Criativo</h1>
+              <p class="descricao-nid"><p>
+                <p>
+                  Olá! Meu nome é Ivoneide Silva, tenho 28 anos e sou desenvolvedora Full-Stack, formada em Análise e Desenvolvimento de Sistemas.<br/><br/>
+                  Tenho uma base sólida em desenvolvimento de software, com experiência tanto no front-end quanto no back-end, além de habilidades em banco de dados e ferramentas de apoio ao desenvolvimento.<br/><br/>
+                  Durante a faculdade, participei de diversos projetos práticos, como o desenvolvimento de sites e um sistema de cadastro em grupo.<br/><br/>
+                  Tenho conhecimento em Git e, atualmente, trabalho com a plataforma ServiceNow, onde desenvolvo soluções personalizadas utilizando scripts em JavaScript para automatizar processos de negócios, criar formulários dinâmicos, implementar fluxos de trabalho e configurar integrações com outras ferramentas.<br/><br/>
+                  Como desenvolvedora ServiceNow, sou responsável por criar funcionalidades dentro do ambiente da plataforma, otimizando tarefas internas, criando botões, relatórios, ações automatizadas e melhorando a experiência do usuário com base nas necessidades da empresa.
+                </p>
+
+              <span class="w3-text-white social" style="margin-top:050px">
+                <p >Follow us on Social media</p>
+                <div class="w3-margin-top">
+             <a href="#">  <i class="fa fa-facebook-official w3-hover-opacity icons" ></i></a> 
+             <a href="#"><i class="fa fa-instagram w3-hover-opacity icons" ></i></a>  
+             <a href="#"><i class="fa fa-linkedin w3-hover-opacity icons"></i></a>  
+             </div>
+              </span>
+             </div>
+           </div>
+         </div>
+      </section>
+      
+      <main style="padding-bottom:40px ;">
+        <h2 class="title" id="projects">Lista de projetos <img src="nidsilva.png" class="img_gallery" alt="image 1" width="150"></h2>
+        <div class="games">
+          <div class="game-list">
+            <a href="https://ppads-2023s1-gold.vercel.app/login" target="_blank">
+            <img src="/Loja de livros - Google Chrome 2023-03-22 12-41-31.gif" alt="#" style="width:100%; height: 150px; border-radius: 10px;" ></a>
+          <h3></h3>
+          <p></p>
+          </div>
+          <div class="game-list">
+            <a href="https://pacheco7reformas.com.br/" target="_blank">
+              <img src="/OTIMI-removebg-preview.png" alt="#" style="width:100%; height: 300px;"/></a>
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="game-list">
+            <a href="https://estorias-league-of-legends.vercel.app/" target="_blank">
+              <img src="/lol - Google Chrome 2024-04-09 16-58-11.gif" alt="#" style="width:100%; height: 150px; border-radius: 10px; "></a>
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="game-list">
+            <a href="https://assessoriadhavinmkt.com.br/" target="_blank">
+              <img src="/dhavin.gif" alt="" style="width:220px; height: 150px; border-radius: 10px;"/></a>
+            <h3></h3>
+             <p></p>
+          </div>
+          <div class="game-list">
+            <a href="https://site-avatar-sigma.vercel.app/" target="_blank">
+            <img src="/avatar.gif" alt="#" style="width:220px; height: 150px; border-radius: 10px;"/></a>
+          <h3></h3>
+          <p></p>
+          </div>
+          <div class="game-list">
+            <a href="https://destino.com" target="_blank">
+            <img src="/finan.png" alt="#" style="width:100px; height: 150px; border-radius: 10px;"/></a>
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+         </div>
+       </div>
+
+        <div class="store" id="skills">
+         <h2 class="title">skills</h2>
+        <div class="game-store">
+
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/Angular-Dark.svg" alt="Photo by Katharina Gloth | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+             <h4>Keyboard</h4>
+             <span> </span>
+             <span></span>
+            </div>
+
+          </div>
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/Git.svg" alt="Photo by Maverick Timotius | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+              <h4>Server</h4>
+              <span> </span>
+              <span></span>
+            </div>
+
+          </div>
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/CSS.svg" alt="Photo by Emiliano Cicero | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+              <h4></h4>
+              <span> </span>
+              <span></span>
+            </div>
+
+          </div>
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/JavaScript.svg"  alt="Photo by wu yi | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+              <h4></h4>
+              <span> </span>
+              <span></span>
+            </div>
+
+          </div>
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/Postman.svg" alt="Photo by Alienware | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+              <h4></h4>
+              <span>  </span>
+              <span></span>
+            </div>
+
+          </div>
+          <div class="game-store-list">
+            <div class="game-image">
+              <img src="/img-skil/Java-Dark.svg" alt="Photo by Sean Stone | Unsplash"/>
+            </div>
+            <div class="store-text-description">
+              <h4></h4>
+              <span>  </span>
+              <span></span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="event" id="talk" >
+        <h2 class="title">Pronto para um bate-papo?</h2>
+
+        <div class="event-hero" style="position: relative; ">
+          
+
+          <div class="event-text">
+            <h2  class="badge" style=" background-color: orange; color:#000015 ;padding:10px">Vamos conversar?</h2>
+             <h1 class="event-title">me conte mais sobre o seu projeto</h1>
+              <h4>Preencha os dados abaixo e entrarei em contato o mais breve possível para discutir seu projeto.</h4>
+               <form id="formulario">
+    <input type="text" id="nome" placeholder="Nome"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="text" id="mensagem" placeholder="Mensagem"><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="message" style="color: green; display: none;">As informações foram enviadas com sucesso!</p>
+                
+          </div>
+          <div class="event-image">
+            <img src="/nidsilva.png"/>
+          </div>
+          
+        </div>
+
+      </div>
+      <div>
+
+      <h2 class="title">Contato</h2>
+      <div class="contact" id="contact" style="padding-bottom: 10px !important;">
+      <div class="contact-list contact-address"  >
+        <h5><span><i class="fa fa-map-marker w3-xlarge w3-text-light-grey"></i></span>Endereço</h5>
+        <p>Brasil</p>
+        <p>São paulo teste </p>
+      </div>
+      <div class="contact-list">
+        <h5><span><i class="fa fa-envelope w3-xlarge w3-text-light-grey"></i></span>Email</h5>
+        <a href="mailto:devwebnid@gmail.com">neidinidnid05@gmail.com</a>
+  
+      </div>
+      <div class="contact-list" >
+        <h5><span><i class="fa fa-phone w3-xlarge w3-text-light-grey"></i></span>Telefone</h5>
+        <p></p>
+       
+      </div>
+
+      </div>
+    </div>
+        
+      </main>
+      
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    <script type="module">
+  import { enviarDadosFormulario } from 'firebase.js';
+
+  // Adicionar evento de envio ao formulário
+// Adicionar evento de envio ao formulário
+const formContato = document.getElementById('formularioContato');
+
+formContato.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nome = formContato['name'].value;
+
+    try {
+        // Enviar os dados para o Firebase Realtime Database
+        await enviarDadosFormulario(nome);
+        console.log('Dados do formulário de contato enviados com sucesso!');
+        
+        // Aqui você pode adicionar a lógica para mostrar a mensagem de sucesso
+        const messageDiv = document.getElementById("message");
+        messageDiv.style.display = "block"; // Exibir mensagem de sucesso
+    } catch (error) {
+        console.error('Erro ao enviar dados do formulário de contato:', error);
+        alert("Erro ao enviar o formulário. Tente novamente.");
+    }
+
+    // Limpar o formulário após o envio
+    formContato.reset();
+});
+
+</script>
+
+  <script>
+    // ✅ Configurações do Firebase
+ const firebaseConfig = {
+  apiKey: "AIzaSyBmqnjiAHb-pjqsspZ6kcBjcK9Lks0iHqU",
+  authDomain: "portifolionid.firebaseapp.com",
+  databaseURL: "https://portifolionid-default-rtdb.firebaseio.com",
+  projectId: "portifolionid",
+  storageBucket: "portifolionid.firebasestorage.app",
+  messagingSenderId: "438566113511",
+  appId: "1:438566113511:web:efaf522682c2d6d8051242"
+};
+
+    // ✅ Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // ✅ Evento de envio do formulário
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+      event.preventDefault(); // evita recarregar
+
+      // Pega os valores
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      // Envia para o Firebase
+      database.ref("mensagens").push({
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+      })
+      .then(() => alert("Dados enviados com sucesso!"))
+      .catch((error) => console.error("Erro ao enviar dados:", error));
+    });
+  </script>
+<script src="firebase.js"></script>
+<script src="ConfirmacaoEnvio.js"></script>
+<script type="module" src="app.js"></script>
+
+
+</body>
+</html>
